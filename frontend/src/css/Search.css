@@ -1,0 +1,62 @@
+.search-form {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.search-form input, .search-form textarea, .search-form select  {
+    box-shadow: .2em .2em 0 0 rgba(0, 0, 0, 0.25);
+    margin: 0 0 8px 0;
+    box-sizing: border-box;
+    height: 32px;
+    width: 80%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.search-form textarea {
+    height: 50px;
+    resize: none;
+}
+
+.search-form button {
+    background-color: #666666;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 14px 2px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 12px;
+}
+
+
+.result-table {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 500px;
+    width: 100vw;
+    text-align: left;
+}  
+
+.result-table thead {
+    background-color: #282c34;
+    color: white;
+}
+
+
+
+.result-table td, .result-table th {
+    width: 50%;
+    text-align: left;
+    padding: 15px;
+}
+
+
+.result-table tr:nth-child(even) {background-color: #f2f2f2;}
