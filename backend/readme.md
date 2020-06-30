@@ -5,7 +5,7 @@ a virtual environment allows you to install packages for specific projects.
 to create a virtual environment you can run `python3 -m venv env`
 
 ## step 2: start the virtual environment
-after creating the environment you still need to start them.
+after creating the environment you still need to start it.
 on mac and linux you can run `source env/bin/activate`.
 on windows run `.\env\Scripts\activate`.
 
