@@ -4,15 +4,19 @@ import shapefile
 
 import re
 import csv
+from pathlib import Path
 
-place_data = shapefile.Reader("places\\gis_osm_places_free_1.shp")
+place_data_path = str(Path("places/gis_osm_places_free_1.shp"))
+place_data = shapefile.Reader(place_data_path)
 place_fields = place_data.fields[1:]
 place_field_names = [field[0] for field in place_fields]
 
-
-road_data = shapefile.Reader("roads\\gis_osm_roads_free_1.shp")
+road_data_path = str(Path("roads/gis_osm_roads_free_1.shp"))
+road_data = shapefile.Reader(road_data_path)
 road_fields = road_data.fields[1:]
 road_field_names = [field[0] for field in road_fields]
+
+zip_data_path = str(Path('zip/zip_codes.csv'))
 
 
 def get_place_by_name(name):
@@ -53,7 +57,7 @@ def get_area_by_zip(zip):
     """
     # dict reader doesn't reset iterator,
     # this means that the file has to be opened on every search
-    zip_data = csv.DictReader(open('zip\\zip_codes.csv', 'r'))
+    zip_data = csv.DictReader(open(zip_data_path, 'r'))
 
     for row in zip_data:
         if zip.casefold() in row["nl_sixpp"].casefold():
